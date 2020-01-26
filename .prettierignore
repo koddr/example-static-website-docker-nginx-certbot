@@ -3,6 +3,7 @@
 .gitignore
 .prettierignore
 **/*.svg
+*.md
 
 # Folders
 **/node_modules/*

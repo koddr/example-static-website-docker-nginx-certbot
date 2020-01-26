@@ -1,0 +1,23 @@
+# docker-compose.prod.yml by Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
+
+version: "3.7"
+
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+
+  nginx:
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html/
+      - ./webserver/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./webserver/nginx/site.com.conf:/etc/nginx/sites-enabled/site.com.conf # change site.com (!)
+      - ./webserver/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/certbot/conf:/etc/letsencrypt
+      - ./webserver/certbot/www:/var/www/certbot
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - frontend

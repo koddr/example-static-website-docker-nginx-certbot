@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Frontend
+**/.cache/
+**/node_modules/
+**/build/
+**/dist/
+
+# Webserver
+**/certbot/

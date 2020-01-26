@@ -1,0 +1,18 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Your project description.",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "build": "parcel build ./src/html/*.html -d ./build",
+    "copy:common": "cp -R ./src/common/* ./build",
+    "build:prod": "npm run build && npm run copy:common"
+  },
+  "author": "Your Name",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
+}

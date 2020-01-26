@@ -1,0 +1,36 @@
+# docker-compose.yml by Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
+
+version: "3.7"
+
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    networks:
+      - nginx_net
+    volumes:
+      - ./webserver/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./webserver/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./webserver/certbot/conf:/etc/letsencrypt
+      - ./webserver/certbot/www:/var/www/certbot
+    ports:
+      - 80:80
+    restart: unless-stopped
+    command: /bin/sh -c "while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g 'daemon off;'"
+
+  certbot:
+    container_name: certbot
+    image: certbot/certbot
+    networks:
+      - nginx_net
+    volumes:
+      - ./webserver/certbot/conf:/etc/letsencrypt
+      - ./webserver/certbot/www:/var/www/certbot
+    restart: unless-stopped
+    entrypoint: /bin/sh -c "trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;"
+    depends_on:
+      - nginx
+
+networks:
+  nginx_net:
+    name: nginx_net

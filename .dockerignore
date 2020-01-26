@@ -1,0 +1,12 @@
+# Files
+.gitignore
+.editorconfig
+.prettierignore
+Makefile
+*.conf
+*.yml
+*.sh
+
+# Folders
+.git/
+**/node_modules/

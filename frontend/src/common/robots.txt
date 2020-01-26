@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /apple-touch-icon.png
+
+Sitemap: https://site.com/sitemap.xml

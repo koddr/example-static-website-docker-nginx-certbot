@@ -26,7 +26,7 @@ cd example-static-website-docker-nginx-certbot
 ```
 
 - Push configured project to your own git repository.
-- Go to DigitalOcean account, create and configure new droplet.
+- Go to [DigitalOcean](https://m.do.co/c/b41859fa9b6e) account, create and configure new droplet.
 - Connect via SSH to your droplet and `git clone` your repo.
 - Check configuration of `Certbot`, start the process of obtaining SSL certificate in test mode:
 

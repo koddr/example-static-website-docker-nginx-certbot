@@ -64,7 +64,7 @@ If you want to say «thank you»:
 
 1. Twit about article [on your Twitter](https://twitter.com/intent/tweet?text=How%20to%20dockerize%20your%20static%20website%20with%20Nginx%2C%20automatic%20renew%20SSL%20for%20domain%20by%20Certbot%20and%20deploy%20it%20to%20DigitalOcean%3F%20https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%3Ftext%3Dhttps%3A%2F%2Fdev.to%2Fkoddr%2Fhow-to-dockerize-your-static-website-with-nginx-automatic-renew-ssl-for-domain-by-certbot-and-deploy-it-to-digitalocean-4cjc).
 2. Add a GitHub Star and make Fork to this repository.
-3. Donate some money to project author via PayPal: [@paypal.me/koddr](https://paypal.me/koddr?locale.x=en_EN).
+3. Donate some money to project author via PayPal: [@paypal.me/koddr](https://paypal.me/koddr?locale.x=en_EN) or [LiberaPay](https://liberapay.com/koddr/donate).
 4. Join DigitalOcean at our [referral link](https://m.do.co/c/b41859fa9b6e) (your profit is **$100** and we get $25).
 
 Thanks for your support! 😘
